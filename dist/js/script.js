@@ -22,7 +22,7 @@ let endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientID}`;
 
 let imageElement = document.querySelector("#unsplashImage");
 let imageLink = document.querySelector("#imageLink");
-let imageLink2 = document.querySelector("#imageLink2");
+
 
 fetch(endpoint) 
     .then(function (response){
@@ -30,4 +30,5 @@ fetch(endpoint)
     })
     .then(function(jsonData){
         imageElement.src = jsonData.urls.small;
+        
     })
