@@ -32,3 +32,12 @@ fetch(endpoint)
         imageElement.src = jsonData.urls.small;
         
     })
+
+var today = new Date();
+var dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+var dayOfWeek = today.getDay();
+var date = today.getDate();
+var month = today.getMonth();
+var dayName = dayNames[dayOfWeek];
+var monthName = monthNames[month];
