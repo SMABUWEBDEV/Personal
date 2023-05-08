@@ -22,6 +22,15 @@ hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 });
+
+//Klik diluar hamburger
+window.addEventListener('click',function (e) {
+    if (e.target != hamburger && e.target != navMenu) {
+        hamburger.classList.remove('hamburger-active');
+        navMenu.classList.add('hidden');
+    }
+});
+
 let clientID = "3G3o5OBjyqa9MSygP_oIFu3q0JxdW7LmZ9yZSbjoIRg";
 let endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientID}`;
 
